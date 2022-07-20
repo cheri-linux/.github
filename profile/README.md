@@ -43,4 +43,4 @@ Buildroot build system will build CHERI LLVM toolchain, CHERI QEMU, CHERI GDB, L
 ```
 make run
 ```
-It uses script ["build/run128_riscv.sh"](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to run QEMU.
+It uses script [build/run128_riscv.sh](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to run QEMU.
