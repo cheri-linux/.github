@@ -25,17 +25,22 @@ git clone https://github.com/cheri-linux/buildroot.git
 cd buildroot
 ```
 
-2. Configure 
+2. Configure build system
 ```
 make O=riscv64cheri qemu_riscv64cheri_defconfig
 cd riscv64cheri
 ```
+It uses [qemu_riscv64cheri_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheri_defconfig) configuration file.
+
 3. Build the system
 ```
 make -j12
 ```
+Buildroot build system will build CHERI LLVM toolchain, CHERI QEMU, CHERI GDB, Linux kernel, MUSL libc, busybox, openssh and openssl.
+
+
 4. Run QEMU
 ```
 make run
 ```
-It uses script ["build/run128_riscv.sh"](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to QEMU.
+It uses script ["build/run128_riscv.sh"](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to run QEMU.
