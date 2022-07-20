@@ -38,3 +38,4 @@ make -j12
 ```
 make run
 ```
+It uses script ["build/run128_riscv.sh"](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to QEMU.
