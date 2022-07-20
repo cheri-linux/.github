@@ -1,12 +1,18 @@
 # Linux CHERI RISCV project
 
-Capability Hardware Enhanced RISC Instructions (CHERI) is an extension to the Instruction Set Architecture aming to provide hardware assisted memory safety to unsafe languages like C.
+Capability Hardware Enhanced RISC Instructions (CHERI) is an extension to the Instruction Set Architecture aming to provide hardware assisted memory safety to to improve memory protection of unsafe languages like C. CHERI has been developed by the researchers from Cambridge Univeristy. Researchers from Cambrdge university were focusing on FreeBSD like operating system.
+
+Broad information about CHERI can be found here: 
+* https://www.cl.cam.ac.uk/research/security/ctsrd/cheri
+* https://github.com/CTSRD-CHERI
+
+This port of Linux to the CHERI (RISC-V) was developed to validate the performance and security properties of CHERI also for Linux, which is the most used OS kernel today, especially in consumer and cloud. The CHERIfication of Linux, primarily involved two main endeavors: The first was to support user-space programs and daemons compiled with CHERI. In order to achieve this, programs needed to be loaded with the awareness that they were compiled with CHERI support --- requiring  necessary changes in the program loader, acting on changes in the ELF format. The changes were needed to manage the capability-formatting of environment variables for the program. Also, the scheduler and exception handler in the kernel needed to be made CHERI-aware, i.e. to know whether a user-space process is CHERIfied or not, since register stores and restore have to account for whether capability registers need to be saved and restored during scheduling. The second endeavor was to compile the kernel proper with CHERI memory protection, i.e. to let CHERI capabilities guard the memory allocations within the kernel. The current state of this part of the CHERIfication covers only the main kernel, its  memory management code, its bootstrap for RISC-V and selected drivers (filesystem, network) that have been used for validation in QEMU and on FPGAs. This part of the work mostly included fixes for pointer (capability) provenance, i.e. to modify casts from integers to pointers which in most architectures can be done, but in CHERI, the address must be accompanied with the range of the reference turning the pointer into a capability. A few instances where kernel code modified in this way actually turned out to reference memory addresses beyond the allocation (mostly different optimizations) where also corrected. 
+
+This open-source repository contains our CHERI-modifications to a number of different existing projects around the Linux kernel and its run-time. The project is complete enough to run the Linux kernel with a small run-time on top of the emulated QEMU RISC-V CHERI emulator, and necessary scripting (buildroot) is included to showcase this. We hope the research, CHERI and Linux communities can leverage this work for further evolving CHERI towards the fully functional, deployed secure computing architecture it deserves to become.
 
 This set of projects are dedicated to CHERI support Linux. The current focus was on RISCV architecture, but not limited to.
 
-More information about CHERI can be found here: 
-* https://www.cl.cam.ac.uk/research/security/ctsrd/cheri
-* https://github.com/CTSRD-CHERI
+# Building and running
 
 How to build and run:
 
