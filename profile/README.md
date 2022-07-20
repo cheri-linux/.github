@@ -14,11 +14,27 @@ This set of projects are dedicated to CHERI support Linux. The current focus was
 
 # Building and running
 
+CHERI Linux port uses [buildroot](https://buildroot.org/) tool to generate Linux system images and CHERI RISCV QEMU emulator to run them.
+
 How to build and run:
 
-1. git clone https://github.com/cheri-linux/buildroot.git
-2. cd buildroot
-3. make O=riscv64cheri qemu_riscv64cheri_defconfig
-4. cd riscv64cheri
-5. make -j12
-6. make run
+1. Clone CHERI linux buildroot
+
+```
+git clone https://github.com/cheri-linux/buildroot.git
+cd buildroot
+```
+
+2. Configure 
+```
+make O=riscv64cheri qemu_riscv64cheri_defconfig
+cd riscv64cheri
+```
+3. Build the system
+```
+make -j12
+```
+4. Run QEMU
+```
+make run
+```
