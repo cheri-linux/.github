@@ -52,6 +52,6 @@ After system is booted, normal loging prompt is displayed. Use 'root' username w
 It is also possible login via SSH to the port 7777 (non-CHERI SSH) and 7778 (CHERI SSH).
 
 ```
-ssh -p 7777 localhost
-ssh -p 7778 localhost
+ssh -p 7777 root@localhost
+ssh -p 7778 root@localhost
 ```
