@@ -44,3 +44,14 @@ Buildroot build system will build CHERI LLVM toolchain, CHERI QEMU, CHERI GDB, L
 make run
 ```
 It uses script [build/run128_riscv.sh](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/build/run128_riscv.sh) to run QEMU.
+
+5. Login
+
+After system is booted, normal loging prompt is displayed. Use 'root' username without password.
+
+It is also possible login via SSH to the port 7777 (non-CHERI SSH) and 7778 (CHERI SSH).
+
+```
+ssh -p 7777 localhost
+ssh -p 7778 localhost
+```
