@@ -31,11 +31,22 @@ cd buildroot
 ```
 
 2. Configure build system
+
+1) Hybrid kernel + Purecap userspace
+
 ```
 make O=riscv64cheri qemu_riscv64cheri_defconfig
 cd riscv64cheri
 ```
 It uses [qemu_riscv64cheri_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheri_defconfig) configuration file.
+
+2) Purecap kernel + Purecap userspace
+
+```
+make O=riscv64cheri qemu_riscv64cheripc_defconfig
+cd riscv64cheri
+```
+It uses [qemu_riscv64cheripc_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheripc_defconfig) configuration file.
 
 3. Build the system
 ```
