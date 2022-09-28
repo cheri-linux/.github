@@ -32,16 +32,22 @@ cd buildroot
 
 2. Configure build system
 
- * Hybrid kernel + Purecap userspace (It uses [qemu_riscv64cheri_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheri_defconfig) configuration file.)
+ * Hybrid kernel + Purecap userspace with MUSL (It uses [qemu_riscv64cheri_musl_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheri_musl_defconfig) configuration file.)
 
 ```
-make O=riscv64cheri qemu_riscv64cheri_defconfig
+make O=riscv64cheri qemu_riscv64cheri_musl_defconfig
 cd riscv64cheri
 ```
- * Purecap kernel + Purecap userspace (It uses [qemu_riscv64cheripc_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheripc_defconfig) configuration file.)
+ * Purecap kernel + Purecap userspace with MUSL (It uses [qemu_riscv64cheripc_musl_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheripc_musl_defconfig) configuration file.)
 
 ```
-make O=riscv64cheri qemu_riscv64cheripc_defconfig
+make O=riscv64cheri qemu_riscv64cheripc_musl_defconfig
+cd riscv64cheri
+```
+ * Hybrid kernel + Purecap userspace with GNU Libc (It uses [qemu_riscv64cheri_glibc_defconfig](https://github.com/cheri-linux/buildroot/blob/riscv-cheri/configs/qemu_riscv64cheri_musl_defconfig) configuration file.)
+
+```
+make O=riscv64cheri qemu_riscv64cheri_glibc_defconfig
 cd riscv64cheri
 ```
 
