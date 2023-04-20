@@ -5,7 +5,7 @@ Here is our whitepaper on cherifying Linux:
 
 # Linux CHERI RISCV project
 
-Capability Hardware Enhanced RISC Instructions (CHERI) is an extension to the Instruction Set Architecture aming to provide hardware assisted memory safety to improve memory protection of unsafe languages like C. CHERI has been developed by the researchers from Cambridge Univeristy. Researchers from Cambrdge university were focusing on FreeBSD like operating system.
+Capability Hardware Enhanced RISC Instructions (CHERI) is an extension to the Instruction Set Architecture aiming to provide hardware assisted memory safety to improve memory protection of unsafe languages like C. CHERI has been developed by the researchers from Cambridge University. Researchers from Cambridge university were focusing on FreeBSD like operating system.
 
 Broad information about CHERI can be found here: 
 * https://www.cl.cam.ac.uk/research/security/ctsrd/cheri
@@ -66,7 +66,7 @@ It uses script [build/run128_riscv.sh](https://github.com/cheri-linux/buildroot/
 
 5. Login
 
-After system is booted, normal loging prompt is displayed. Use 'root' username without password.
+After system is booted, normal logging prompt is displayed. Use 'root' username without password.
 
 It is also possible login via SSH to the port 7777 (non-CHERI SSH) and 7778 (CHERI SSH).
 
