@@ -1,7 +1,8 @@
 # Whitepaper
 
 Here is our whitepaper on cherifying Linux:
-* [On CHERIfying Linux](https://github.com/cheri-linux/.github/files/9504062/cherilinux0609.pdf)
+* [On CHERIfying Linux](https://github.com/cheri-linux/.github/files/12662248/CHERI_White_Paper_v2.pdf)
+<!---* (https://github.com/cheri-linux/.github/files/9504062/cherilinux0609.pdf) --->
 
 # Linux CHERI RISCV project
 
