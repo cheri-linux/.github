@@ -1,7 +1,8 @@
 # Whitepaper
 
 Here is our whitepaper on cherifying Linux:
-* [On CHERIfying Linux](https://github.com/cheri-linux/.github/files/12662248/CHERI_White_Paper_v2.pdf)
+* [On CHERIfying Linux](https://github.com/cheri-linux/.github/files/13544238/CHERI_White_Paper_v3.pdf)
+<!---* [On CHERIfying Linux](https://github.com/cheri-linux/.github/files/12662248/CHERI_White_Paper_v2.pdf) --->
 <!---* (https://github.com/cheri-linux/.github/files/9504062/cherilinux0609.pdf) --->
 
 # Linux CHERI RISCV project
@@ -75,3 +76,4 @@ It is also possible login via SSH to the port 7777 (non-CHERI SSH) and 7778 (CHE
 ssh -p 7777 root@localhost
 ssh -p 7778 root@localhost
 ```
+
